@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="AQI">ИКВ %.1f</string>
+    <string name="more">Подробнее</string>
+    <string name="full_forecast">Подробный прогноз</string>
+    <string name="AQI_so2">SO₂</string>
+    <string name="today">Сегодня</string>
+    <string name="tomorrow">Завтра</string>
+    <string name="humidity">Влажность %.1f</string>
+    <string name="pressure">Давление %.1f мбар</string>
+    <string name="wind_speed">Ветер %.1f м/с</string>
+    <string name="feels_like">Ощущается как %.1f °C</string>
+    <string name="uv_index">УФ-индекс: %.1f</string>
+    <string name="visibility_range">Видимость %.1f km</string>
+    <string name="short_forecast">Краткий прогноз</string>
+    <string name="location_label">Город/населенный пункт</string>
+</resources>
