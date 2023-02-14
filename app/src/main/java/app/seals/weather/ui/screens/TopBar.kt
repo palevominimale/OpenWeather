@@ -56,7 +56,7 @@ fun TopBar(
 
     LaunchedEffect(pagerState.currentPage) {
         delay(100)
-        selectForecast("${locations[pagerState.currentPage].lat ?: 0},${locations[pagerState.currentPage].lon ?: 0}")
+        if(locations.isNotEmpty()) selectForecast("${locations[pagerState.currentPage].lat ?: 0},${locations[pagerState.currentPage].lon ?: 0}")
     }
 
     Row(
