@@ -3,10 +3,10 @@ This is a simple weather application which is based on Jetpack Compose and imple
 
 Used technologies:
 - Jetpack Compose
-- Room DB
+- Room
 - Retrofit2
 - Coroutines + Flow
-- Koin DI
+- Koin
 - Accompanist
 - Animated Content
 
