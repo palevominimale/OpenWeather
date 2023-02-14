@@ -1,5 +1,6 @@
 # OpenWeather
 This is a simple weather application which is based on Jetpack Compose and implements a MVI pattern with modularisation.
+Implemented russian and english languages.
 
 Used technologies:
 - Jetpack Compose
