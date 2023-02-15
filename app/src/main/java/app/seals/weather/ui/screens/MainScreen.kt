@@ -89,12 +89,12 @@ fun MainScreen(
                     aqi = weather.current?.airQuality,
                     modifier = Modifier.padding(vertical = 8.dp)
                 )
+                RowForecast(forecast = weather.forecast?.forecastday)
                 WeekForecast(
                     modifier = Modifier.padding(horizontal = 16.dp),
                     forecast = weather.forecast,
                     cs = cs
                 )
-                RowForecast(forecast = weather.forecast?.forecastday)
                 val astro = if(weather.forecast?.forecastday != null && weather.forecast!!.forecastday.size > 0) weather.forecast?.forecastday?.get(0)?.astro else null
                 SunMoveProgress(astro = astro)
                 MiscInfo(modifier = Modifier.padding(16.dp), current = weather.current)
@@ -612,7 +612,7 @@ private fun RowForecast(
 
     LazyRow(
         modifier = Modifier
-            .padding(top = 8.dp)
+            .padding(vertical = 8.dp)
             .placeholder(
                 shape = RoundedCornerShape(20.dp),
                 visible = forecast?.isNotEmpty() != true,
