@@ -9,13 +9,16 @@ import app.seals.weather.domain.WeatherApi
 import app.seals.weather.domain.models.ApiResult
 import app.seals.weather.domain.models.PrefsProvider
 import app.seals.weather.domain.models.WeatherResponseDomainModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class MainViewModel(
+@HiltViewModel
+class MainViewModel @Inject constructor(
     private val weatherApi: WeatherApi,
     private val localRepo: LocalRepo,
     private val prefs: PrefsProvider

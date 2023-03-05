@@ -3,6 +3,7 @@ package app.seals.weather.main
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.runtime.collectAsState
@@ -17,13 +18,14 @@ import app.seals.weather.ui.screens.LocationDialog
 import app.seals.weather.ui.screens.MainScreen
 import app.seals.weather.ui.screens.TopBar
 import app.seals.weather.ui.theme.MyApplicationTheme
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import org.koin.android.ext.android.inject
 
+@AndroidEntryPoint
 @OptIn(ExperimentalMaterialApi::class)
 class MainActivity : ComponentActivity() {
 
-    private val vm: MainViewModel by inject()
+    private val vm: MainViewModel by viewModels()
 
     @OptIn(ExperimentalComposeUiApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {

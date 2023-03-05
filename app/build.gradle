@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -53,17 +55,16 @@ dependencies {
 
     //Coil
     implementation("io.coil-kt:coil-compose:$coil")
-
+    implementation "androidx.navigation:navigation-compose:$nav_version"
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     // Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
 
-    //Koin
-    implementation "io.insert-koin:koin-core:$koin"
-    implementation "io.insert-koin:koin-androidx-workmanager:$koin"
-    implementation "io.insert-koin:koin-android:$koin"
+    //Hilt
+    implementation("com.google.dagger:hilt-android:$hilt_version")
+    kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
 
     //Google
     implementation "com.google.accompanist:accompanist-swiperefresh:$accompanist"
@@ -71,7 +72,7 @@ dependencies {
     implementation "com.google.accompanist:accompanist-pager-indicators:$accompanist"
     implementation "com.google.accompanist:accompanist-pager:$accompanist"
 
-    implementation 'androidx.compose.material3:material3:1.1.0-alpha06'
+    implementation 'androidx.compose.material3:material3:1.1.0-alpha07'
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
     implementation 'androidx.activity:activity-compose:1.6.1'
